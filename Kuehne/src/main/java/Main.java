@@ -1,6 +1,3 @@
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 public class Main {
 
 
@@ -12,11 +9,10 @@ public class Main {
 
         CSVReader.read(csvFile);
 
+        // calculation of the points and sorting the athletes
         Sort.sortMapByValues(CSVReader.pointList);
 
-
-        Map<Athlete,Integer> sortedMap = new LinkedHashMap<Athlete, Integer>();
-        
+        // writing
         WriteXML.CreateXML(CSVReader.pointList);
 
 
