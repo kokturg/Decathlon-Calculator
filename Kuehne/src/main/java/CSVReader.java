@@ -1,4 +1,3 @@
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -6,7 +5,8 @@ import java.util.HashMap;
 public class CSVReader {
 
 
-   public static HashMap<String, Integer> pointList = new HashMap<String, Integer>();
+   public static HashMap<Athlete, Integer> pointList = new HashMap<>();
+
 
     public static void read(String csvFile) {
 
@@ -37,22 +37,8 @@ public class CSVReader {
                     athlete.setRunning1500m(values[10]);
 
 
-
-                  System.out.println(values[0]);
-                  System.out.println(athlete.getPointDiscusThrow());
-
-                  System.out.println(athlete.getPointRunning100m());
-
-
-
-                  // Adding athlete name and totalPoint to HashMap
-
-                 pointList.put(athlete.getName(), athlete.getTotalPoint());
-
-
-
-              Sort.sortMapByValues(pointList);
-
+                    // Adding athletes and their totalPoint to HashMap
+                    pointList.put(athlete, athlete.getTotalPoint());
               }
 
         } catch (IOException e) {

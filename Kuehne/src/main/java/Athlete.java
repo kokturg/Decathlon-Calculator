@@ -2,6 +2,8 @@ public class Athlete {
 
     private String name;
 
+    private int order;
+
     private double pointRunning100m;
     private double pointLongJump;
     private double pointShortPut;
@@ -34,6 +36,8 @@ public class Athlete {
 
     public Athlete() {
     }
+
+
 
 
     public int getTotalPoint() {
@@ -217,6 +221,11 @@ public class Athlete {
         return resultRunning1500m;
     }
 
+    public int getOrder() {
+        return order;
+    }
 
-
+    public void setOrder(int order) {
+        this.order = order;
+    }
 }
